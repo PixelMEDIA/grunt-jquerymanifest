@@ -31,18 +31,13 @@ module.exports = function(grunt) {
         author: {
             required: true,
             mapping: function(source) {
-                return {
-                    name: source.author
-                };
+                return source.author;
             }
         },
         licenses: {
             required: true,
             mapping: function(source) {
-                return [{
-                    type: source.license,
-                    url: 'http://opensource.org/licenses/' + source.license
-                }];
+                return source.licenses;
             }
         },
         dependencies: {
